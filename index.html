@@ -1,0 +1,268 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Voidcores</title>
+    <meta
+      name="description"
+      content="Voidcores - the spirit of ShadowCores is returning. Join the Discord to be first in line when the realm lights up again."
+    />
+    <meta
+      name="keywords"
+      content="Voidcores, ShadowCores, MMORPG, Tibia-like, dark fantasy, online RPG"
+    />
+    <meta name="theme-color" content="#8f19ed" />
+    <meta
+      property="og:title"
+      content="Voidcores - the spirit of Shadowcores is returning."
+    />
+    <meta
+      property="og:description"
+      content="The spirit of ShadowCores is returning. Join the Discord to be first in line when the realm lights up again."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Voidcores" />
+    <meta
+      name="twitter:description"
+      content="The spirit of ShadowCores is returning. Join the Discord to be first in line when the realm lights up again."
+    />
+    <meta name="twitter:image" content="logo.png" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;600;700&family=Rajdhani:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(() => {
+            document.body.classList.add("fonts-ready");
+          });
+        } else {
+          window.addEventListener("load", () => {
+            document.body.classList.add("fonts-ready");
+          });
+        }
+      });
+    </script>
+    <style>
+      :root {
+        --bg-0: #0c000f;
+        --bg-1: #161629;
+        --violet-1: #7224b3;
+        --violet-2: #a842ff;
+        --violet-3: #8f19ed;
+        --ink: #f5f2ff;
+        --muted: #b7a7d8;
+        --glow: rgba(168, 66, 255, 0.5);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          "Oxanium",
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          sans-serif;
+        color: var(--ink);
+        background: #05050b;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 24px;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+
+      body.fonts-ready {
+        opacity: 1;
+      }
+
+      .shell {
+        width: min(900px, 100%);
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .hero {
+        display: grid;
+        gap: 20px;
+        padding: 16px;
+        justify-items: center;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.6rem, 3.5vw, 3.6rem);
+        line-height: 1.05;
+        text-shadow: 0 0 24px var(--glow);
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+        max-width: 52ch;
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 24px;
+        border-radius: 999px;
+        margin-top: 25px;
+        background: linear-gradient(135deg, var(--violet-2), var(--violet-3));
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        line-height: 1;
+        box-shadow: 0 12px 30px rgba(168, 66, 255, 0.35);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 36px rgba(168, 66, 255, 0.45);
+      }
+
+      .cta svg {
+        width: 22px;
+        height: 22px;
+        display: block;
+      }
+
+      .cta,
+      .cta * {
+        user-select: none;
+        -webkit-user-select: none;
+      }
+
+      .logo-card {
+        padding: 0;
+        display: grid;
+        place-items: center;
+        margin-top: -10rem;
+      }
+
+      .logo-slot {
+        width: min(500px, 100%);
+        aspect-ratio: 4 / 3;
+        display: grid;
+        place-items: center;
+      }
+
+      .logo-slot img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        z-index: 1;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+      }
+
+      @media (max-width: 700px) {
+        body {
+          height: 100svh;
+          padding: 0 16px;
+        }
+
+        .shell {
+          gap: 14px;
+        }
+
+        .logo-card {
+          margin-top: 0;
+        }
+
+        .logo-slot {
+          width: min(280px, 88vw);
+        }
+
+        h1 {
+          font-size: clamp(1.7rem, 6.6vw, 2.2rem);
+        }
+
+        p {
+          font-size: 0.98rem;
+        }
+
+        .cta {
+          width: min(260px, 80vw);
+          justify-content: center;
+          padding: 14px 22px;
+          font-size: 1rem;
+        }
+
+        p {
+          max-width: 100%;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .logo-card {
+          margin-top: 0;
+        }
+
+        .logo-slot {
+          width: min(240px, 86vw);
+        }
+
+        .cta {
+          width: min(240px, 84vw);
+          padding: 12px 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="logo-card" aria-label="Logo">
+        <div class="logo-slot">
+          <img src="logo.png" alt="Voidcores logo" />
+        </div>
+      </section>
+
+      <section class="hero">
+        <h1>Miss ShadowCores? We do too.</h1>
+        <p>Join the wait on our Discord server to stay updated</p>
+        <a
+          class="cta"
+          href="https://dsc.gg/voidcores"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg
+            viewBox="0 0 127.14 96.36"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21a105.73,105.73,0,0,0,32.17,16.15,77.7,77.7,0,0,0,6.89-11.11A68.42,68.42,0,0,1,29,80.36c.89-.66,1.76-1.35,2.6-2a73.57,73.57,0,0,0,66.2,0c.85.71,1.73,1.39,2.62,2a68.68,68.68,0,0,1-10.69,4.88,77,77,0,0,0,6.89,11.1,105.25,105.25,0,0,0,32.17-16.14C131.11,54.7,126.6,30.77,107.7,8.07Z M42.45,65.69C36.18,65.69,31,60,31,52.8S36,39.91,42.45,39.91c6.5,0,11.68,5.71,11.57,12.89C54,60,48.92,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,52.8S78.25,39.91,84.69,39.91c6.5,0,11.68,5.71,11.57,12.89C96.26,60,91.18,65.69,84.69,65.69Z"
+            />
+          </svg>
+          Join Discord
+        </a>
+      </section>
+    </main>
+  </body>
+</html>
